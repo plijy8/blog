@@ -21,7 +21,7 @@ $(document).ready(function(){
     //липкое меню
 
     var location = window.location.href; // получаем адрес страницы
-    var link = "file:///D:/workspace/templates/sass3/index.html";                // получаем адрес ссылки
+    var link = "file:///D:/workspace/templates/blog/index.html";                // получаем адрес ссылки
     if(location != link) {               // при совпадении адреса ссылки и адреса окна
            $('.mainMenuWrap').css({position: 'fixed',top:'0px','background-color':'#333','margin-top':'0px'}); 
     }
