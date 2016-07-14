@@ -1,7 +1,10 @@
 
-$primaryColor1:#735937;;
+//$primaryColor1:#b7967d;
+$primaryColor1:#ABB7B7;
 $primaryColor:#03B5AA;
 $colorYellov:#DBFE87;
+
+
 
 *:focus {outline: none;}
 
@@ -22,6 +25,7 @@ html,body{
 }
 
 .wrap{
+   
     max-width: 1180px;
     margin: auto;
 }
@@ -249,7 +253,8 @@ html,body{
 	$Banner
 ========================================================================== */
 .banner {
-    background-image: url(../images/ava.jpg);
+    overflow: hidden;
+    background-image: url(../images/bg11.jpeg);
     background-size: cover;
     background-position: 50% 50%;
     background-attachment: fixed;
@@ -257,7 +262,7 @@ html,body{
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-   height: 50%;
+   height: 70%;
    &__Overlay{
         background-color: rgba(0, 0, 0, 0.1);
         z-index: 1;
@@ -269,14 +274,14 @@ html,body{
 
 .intro{
     text-align: center;
-    position: absolute;
+    //position: absolute;
     color: $primaryColor1;
     width: 100%;
         &__siteName{
         font-size: 85px;
         margin: 15px auto;
         text-transform: uppercase;
-        background-color: rgba(255,255,255,0.8);
+        //background-color: rgba(255,255,255,0.8);
         max-width: 650px;
         width: 80%;
         padding: 5px;
@@ -314,8 +319,9 @@ html,body{
 ========================================================================== */
 
 .post{
+    overflow: hidden;
     padding: 10px;
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: center; 
     &__img{
         vertical-align: top;
@@ -338,7 +344,7 @@ html,body{
     margin: -40px 20px 0;
     padding: 20px 20px 14px;
     text-align: center;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.05);
     background-color: #fff;
     -webkit-transition: box-shadow 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
@@ -456,7 +462,7 @@ html,body{
 ========================================================================== */
 
 .sidebar{
-    margin-top: 70px;
+    margin-top: 40px;
     background-color: #fff;
     box-shadow: 0 15px 50px rgba(0,0,0,0.05);
     -webkit-transition: box-shadow 0.2s ease-in-out;
@@ -606,7 +612,8 @@ html,body{
     color: #2fa49d;    
     &__icon{
         float: left;
-        margin: 30px 10px;
+        margin: 10px;
+        line-height: 50px;
         a{
             color: #2fa49d;
             text-decoration: none;
@@ -634,20 +641,47 @@ html,body{
 
 }
 
+@media screen and (max-width: 810px) {
+   .banner {
+    background-attachment: inherit;
+    height: 50%;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
    
 }
 
 @media screen and (max-width: 640px) {
     
-
-}
+    .postDesc{
+        margin: 0;
+       }
+    }
 
 @media screen and (max-width: 480px) {
-    
+    .social {
+        width: 115px;
+        position: static; 
+        margin: 0 auto;
+        &__icon{
+            float: left;
+            margin: 0 10px;
+        }
+
+    }
+    .footer{
+        p{
+            left: 20px;
+            position: static;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 361px) {
    
 
 }

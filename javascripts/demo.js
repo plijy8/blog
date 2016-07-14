@@ -8,7 +8,7 @@ $(document).ready(function(){
         recentH = (introH * 100)/height,
         top = 50 - recentH/2 ;
     
-    $('.intro').css({ top:top+"%"});
+    //$('.intro').css({ top:top+"%"});
 
     var sections = $('section'),
         nav = $('nav[role="navigation"]');
