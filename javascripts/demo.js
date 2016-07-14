@@ -1,7 +1,9 @@
 
 $(document).ready(function(){
      
-    var height = $(window).height();   
+    var instaCount = 8; 
+    var height = $(window).height();
+    var width = $(window).width();    
     var introH = $(".intro").height(),
         recentH = (introH * 100)/height,
         top = 50 - recentH/2 ;
@@ -50,6 +52,32 @@ $(document).ready(function(){
         $('.search').css({'border-color':'#d3d3d3'});
         $(".search__submit").css({'color': '#d3d3d3'});
     });
+
+/* instagram */
+
+    var photos = $('.instagram__img');
+    photos.css({display: 'block'});
+    if(width<800)
+        {
+            photos.eq(7).css({display: 'none'});
+            photos.eq(6).css({display: 'none'});
+            instaCount=6;
+        }
+    if(width<600)
+        {
+            photos.eq(5).css({display: 'none'});
+            photos.eq(4).css({display: 'none'});
+            instaCount=4;
+        } 
+    if(width<400)
+        {
+            photos.eq(3).css({display: 'none'});
+            photos.eq(2).css({display: 'none'});
+            instaCount=2;
+        }   
+    var photoW = (width-30)/instaCount;
+    $(".instagram__img").css({'width': photoW, 'height':photoW});
+
 });
 
 

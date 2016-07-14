@@ -16,7 +16,9 @@ $colorYellov:#DBFE87;
 html,body{
     font-family: Raleway;
     height: 100%;
-    background-color: #F9F9F9;
+   // background-color: #ECECEC;
+    background-color:#f9f9f9;
+    //background-image: url(../images/pattern1.png) ;
 }
 
 .wrap{
@@ -303,11 +305,7 @@ html,body{
     margin: 10px auto;
     &_grey{
         background-color: #d3d3d3;
-        margin: 40px auto 25px auto;
-    }
-    &_small{
         width: 40px;
-        margin: 32px auto 0px auto;
     }
 }
 
@@ -340,7 +338,7 @@ html,body{
     margin: -40px 20px 0;
     padding: 20px 20px 14px;
     text-align: center;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
     background-color: #fff;
     -webkit-transition: box-shadow 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
@@ -417,12 +415,13 @@ html,body{
 
 
 .popularPost{
-    
-    text-align: center;
+    margin-top: 20px;
+    display: flex;
     &__img{
         width: 100px;
-        display: inline-table;
+        display: inline-block;
         img{
+            border-radius: 50%;
             vertical-align: top;
             outline: none;
             width: 100px;
@@ -431,16 +430,17 @@ html,body{
         }
     }
     &__text{   
-        display: inline-table;     
-        line-height: 40px;
-        margin-left: 10px;
+        display: inline-block;     
+        line-height: 50px;
+        margin-left: 20px;
+        max-width: 150px;
         color: #333;
         a{
-        color: #333;
-        text-decoration: none;
-        font-family: Arial;
-        font-size: 13px;
-        text-transform: uppercase;
+            color: #333;
+            text-decoration: none;
+            font-family: Arial;
+            font-size: 13px;
+            text-transform: uppercase;
         &:hover{
             color:$primaryColor;
         }
@@ -554,6 +554,70 @@ html,body{
         color: #333;
     }
 }
+
+
+/* ==========================================================================
+   Footer
+========================================================================== */
+
+
+.instagram{
+    width: 100%;
+    margin: 20px auto;
+    &__img{
+        overflow: hidden;
+        float: left;
+        cursor: pointer;
+        img{
+            width: 100%;
+            object-fit: cover; 
+            
+            -moz-transition: all 1s ease-out;
+            -o-transition: all 1s ease-out;
+            -webkit-transition: all 1s ease-out;
+            &:hover{
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+            }
+        }   
+    }
+}
+
+.footer{
+    margin-top: 50px;
+    min-height: 70px;
+    text-align: center;
+    border-top: 1px solid #d3d3d3;
+    font-size: 19px;
+    p{
+        left: 20px;
+        position: absolute;
+        line-height: 70px;
+
+    }
+}
+
+
+.social{
+    right: 20px;
+    position: absolute;
+    font-size: 19px;
+    color: #2fa49d;    
+    &__icon{
+        float: left;
+        margin: 30px 10px;
+        a{
+            color: #2fa49d;
+            text-decoration: none;
+            &:hover{
+                color: #333;
+            }
+        }
+    }
+}
+
+
 
 /* RESPONSIVE */
 @media screen and (max-width: 800px) {
