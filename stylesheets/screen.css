@@ -332,7 +332,7 @@ html, body {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 50%;
+  height: 100%;
 }
 /* line 261, ../sass/screen.scss */
 .banner__Overlay {
